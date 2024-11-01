@@ -28,7 +28,7 @@ const Hero = () => {
     return (
         <section>
             {/* Main Grid with Heading and Social Icons */}
-            <div className='grid grid-cols-1 sm:grid-cols-[90%_10%] items-center mx-[5%] my-4 p-10 gap-4'>
+            <div className='grid grid-cols-1 sm:grid-cols-[90%_10%] items-center mx-[5%] my-4 p-10 gap-4 pt-32'>
                 {/* Social Icons */}
                 <div className='flex justify-center sm:justify-end space-x-4 order-1 sm:order-2'>
                     {socials.map((item) => (
@@ -40,7 +40,7 @@ const Hero = () => {
 
                 {/* Heading */}
                 <div className='order-2 sm:order-1'>
-                    <h2 className='text-6xl'>ARSEMA Pure Naturals</h2>
+                    <h2 className='text-6xl text-[#4a6b92]'>ARSEMA Pure Naturals</h2>
                 </div>
             </div>
 
