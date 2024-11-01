@@ -55,7 +55,7 @@ const Products = () => {
                             <p className='text-center'>Retail Price: ${product.retail}</p>
                         </div>
 
-                        <button className='border p-2 rounded shadow bg-[#4a6b92] hover:bg-[#6990c0] text-[#f2efea] w-full mt-4'>
+                        <button className='border p-2 rounded shadow hover:-translate-y-1 duration-300 bg-[#4a6b92] hover:bg-[#6990c0] text-[#f2efea] w-full mt-4'>
                             Add to Cart
                         </button>
                     </div>
