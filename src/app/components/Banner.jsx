@@ -11,7 +11,7 @@ const Banner = () => {
           </p>
           <Link
             className='px-4 py-3 border bg-[#f2efea] shadow hover:shadow-none hover:text-[#4a6b92] duration-300 rounded'
-            href={'/'}
+            href={'/collections'}
           >
             SHOP HERE
           </Link>
