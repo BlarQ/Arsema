@@ -13,9 +13,9 @@ const footLinks = [
 
 const Footer = () => {
   return (
-    <footer className='bg-[#f2efea] flex flex-col gap-4 divide-y px-[5%] text-[#4a6b92] bottom-0 fixed inset-x-0'>
+    <footer className='bg-[#f2efea] flex flex-col gap-4 divide-y px-[5%] text-[#4a6b92] bottom-0 inset-x-0'>
         <nav className='pt-4'>
-            <ul className='flex items-center justify-center gap-8'>
+            <ul className='flex flex-col sm:flex-row items-center justify-center gap-8'>
                 {footLinks.map(link => (
                     <li key={link.link} className='hover:text-[gray] duration-300'>
                         <a href={link.url}>{link.link}</a>
@@ -24,7 +24,7 @@ const Footer = () => {
             </ul>
         </nav>
 
-        <div className='flex items-center justify-center py-4'>
+        <div className='flex items-center justify-center py-4 text-center'>
             <p>&copy; {new Date().getFullYear()}. ARESMA PURE NATURALS - Desined by Pholoba</p>
         </div>
         
