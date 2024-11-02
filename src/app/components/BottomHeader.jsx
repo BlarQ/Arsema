@@ -19,7 +19,7 @@ const BottomHeader = () => {
                 <Link href={'/cart'}>Cart({cartVal.length})</Link>
             </li>
             <li className='hover:text-[gray] duration-300'>
-                <Link href={'/'}>Checkout</Link>
+                <Link href={'/checkout'}>Checkout</Link>
             </li>
         </ul>
     </div>
