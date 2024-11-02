@@ -51,7 +51,7 @@ const AuthForm = () => {
         <h2 className='text-2xl font-bold pb-4'>{isSignUp ? 'Customer Sign Up' : 'Customer Sign In'}</h2>
 
 
-        <form className='flex flex-col w-[25%] gap-4 min-h-full border p-4 rounded'
+        <form className='flex flex-col w-[90%] sm:w-[60%] lg:w-[25%] gap-4 min-h-full border p-4 rounded'
           onSubmit={handleSubmit}>
           <div className='flex flex-col'>
             <label>Email</label>
