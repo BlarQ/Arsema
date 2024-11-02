@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
       >
         <CartProvider>
 
-        <div className="fixed inset-x-0 top-0 z-10">
+        <div className="fixed inset-x-0 top-0 z-10 shadow">
           <Header />
           <BottomHeader />
         </div>
