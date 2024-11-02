@@ -73,7 +73,7 @@ export default function ContactPage() {
     const isFormValid = Object.values(formData).every((value) => value.trim() !== '') && isEmailValid;
 
     return (
-        <div className='px-[5%]'>
+        <div className='px-[5%]' id='contact'>
             <h1 className='text-2xl font-bold text-center'>Contact Us</h1>
 
             <div className='py-10 flex flex-col-reverse sm:flex-row sm:justify-between sm:items-center sm:space-x-28'>
@@ -180,7 +180,7 @@ export default function ContactPage() {
 
                         <Button 
                             type='submit'
-                            className='w-fit bg-[#4a6b92] hover:bg-[#567dac]'
+                            className='w-full bg-[#4a6b92] hover:bg-[#567dac]'
                             variant="contained"
                             endIcon={<SendIcon />}
                             disabled={!isFormValid}
