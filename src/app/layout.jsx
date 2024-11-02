@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="fixed inset-x-0 top-0">
+        <div className="fixed inset-x-0 top-0 z-10">
           <Header />
           <BottomHeader />
         </div>
