@@ -2,7 +2,7 @@ import React from 'react'
 
 const footLinks = [
     { link: 'Home', url: '/' },
-    { link: 'Contact Us', url: '/contact' },
+    // { link: 'Contact Us', url: '/contact' },
     { link: 'Privacy Policy', url: '/privacy' },
     { link: 'Terms & Conditions', url: '/terms' },
     { link: 'Refund Policy', url: '/help' },

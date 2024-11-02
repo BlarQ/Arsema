@@ -8,7 +8,7 @@ import ContactPage from "./components/ContactPage";
 
 export default function Home() {
   return (
-    <div>
+    <div id="home">
       <Hero />  
       <Banner />
       <Products />
