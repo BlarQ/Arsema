@@ -1,5 +1,8 @@
+"use client"
+
 import Image from 'next/image';
-import React from 'react';
+import React, { useContext } from 'react';
+import { CartContext } from '../providers';
 
 const products = [
     { 
@@ -33,6 +36,26 @@ const products = [
 ];
 
 const Products = () => {
+    const { cartVal, setCartVal } = useContext(CartContext)
+
+    function addValueToCart(product) {
+        const existingProductIndex = cartVal.findIndex(item => item.id === product.id);
+        
+        if (existingProductIndex !== -1) {
+            // Product already in the cart, increase quantity
+            const updatedCart = [...cartVal];
+            updatedCart[existingProductIndex].quantity += 1; // Increment quantity
+            setCartVal(updatedCart);
+        } else {
+            // Product not in the cart, add it with quantity 1
+            const updatedCart = [...cartVal, { ...product, quantity: 1 }];
+            setCartVal(updatedCart);
+        }
+    
+        // alert('Product added to cart!'); // Alert for demonstration purposes
+    }
+    
+
     return (
         <section className='py-10 px-[5%]'>
             <h2 className='text-2xl font-bold mb-4 text-center'>Our Products</h2>
@@ -42,10 +65,10 @@ const Products = () => {
                         <div className='flex justify-center mb-4'>
                             <Image 
                                 src={product.img} 
-                                width={200} // Reduced width for better responsiveness
-                                height={200} // Reduced height for better responsiveness
-                                alt={product.name} // Improved alt text
-                                className='rounded object-cover' // Ensured the image fits well within the container
+                                width={200}
+                                height={200}
+                                alt={product.name}
+                                className='rounded object-cover'
                             />
                         </div>
 
@@ -55,7 +78,7 @@ const Products = () => {
                             <p className='text-center'>Retail Price: ${product.retail}</p>
                         </div>
 
-                        <button className='border p-2 rounded shadow hover:-translate-y-1 duration-300 bg-[#4a6b92] hover:bg-[#6990c0] text-[#f2efea] w-full mt-4'>
+                        <button onClick={() => addValueToCart(product)} className='border p-2 rounded shadow hover:-translate-y-1 duration-300 bg-[#4a6b92] hover:bg-[#6990c0] text-[#f2efea] w-full mt-4'>
                             Add to Cart
                         </button>
                     </div>
