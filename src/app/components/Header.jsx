@@ -2,10 +2,10 @@ import Link from 'next/link'
 import React from 'react'
 
 const navItems = [
-    { id: 1, title: 'Home', link: '#home' },
+    { id: 1, title: 'Home', link: '/#home' },
     { id: 2, title: 'About Us', link: '/about-us' },
-    { id: 3, title: 'Products', link: '#products' },
-    { id: 4, title: 'Contact', link: '#contact' }
+    { id: 3, title: 'Products', link: '/#products' },
+    { id: 4, title: 'Contact', link: '/#contact' }
 ]
 
 const Header = () => {
