@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const footLinks = [
@@ -25,7 +26,7 @@ const Footer = () => {
         </nav>
 
         <div className='flex items-center justify-center py-4 text-center'>
-            <p>&copy; {new Date().getFullYear()}. ARESMA PURE NATURALS - Desined by Pholoba</p>
+            <p>&copy; {new Date().getFullYear()}. ARSEMA PURE NATURALS - Desined by <Link className='text-blue-800 underline' href={'https://www.github.com/BlarQ'} target='_blank'>BlarQ</Link> & Pholoba</p>
         </div>
         
     </footer>
