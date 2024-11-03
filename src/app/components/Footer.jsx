@@ -8,7 +8,7 @@ const footLinks = [
     { link: 'Terms & Conditions', url: '/terms' },
     { link: 'Refund Policy', url: '/help' },
     { link: 'Shipping Policy', url: '/help' },
-    { link: 'FAQs', url: '/social' }
+    { link: 'FAQs', url: '/faqs' }
 
 ]
 
