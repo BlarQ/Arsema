@@ -40,7 +40,7 @@ const Hero = () => {
 
                 {/* Heading */}
                 <div className='order-2 sm:order-1'>
-                    <h2 className='text-6xl text-[#4a6b92]'>ARSEMA Pure Naturals</h2>
+                    <h2 className='text-6xl font-title text-[#4a6b92]'>ARSEMA Pure Naturals</h2>
                 </div>
             </div>
 

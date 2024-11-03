@@ -11,7 +11,7 @@ const navItems = [
 const Header = () => {
   return (
     <header className='flex flex-col sm:flex-row items-center justify-between px-[5%] py-3 bg-[#f2efea]'>
-        <h1 className='text-2xl font-semibold text-[#4a6b92] mb-2 md:mb-0'>
+        <h1 className='text-4xl font-title font-bold text-[#4a6b92] mb-2 md:mb-0'>
             APN
         </h1>
 
