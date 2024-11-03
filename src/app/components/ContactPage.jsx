@@ -17,11 +17,11 @@ export default function ContactPage() {
     const onSubmit = async (event) => {
         event.preventDefault();
 
-        const dataToSend = { ...formData, access_key: "KEY_PASS" };
+        const dataToSend = { ...formData, access_key: `${process.env.NEXT_PUBLIC_EMAIL_KEY}` };
         const json = JSON.stringify(dataToSend);
 
         try {
-            const res = await fetch("Hostname", {
+            const res = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
