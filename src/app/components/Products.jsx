@@ -1,39 +1,15 @@
 "use client"
 
 import Image from 'next/image';
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { CartContext } from '../providers';
 import Swal from 'sweetalert2';
 
 const products = [
-    { 
-        id: 1, 
-        name: 'Body Cream',
-        wholesale: 45,
-        retail: 50, 
-        img: '/batana.jpg'
-    },
-    { 
-        id: 2, 
-        name: 'Face Cream',
-        wholesale: 70, 
-        retail: 75,
-        img: '/batana.jpg'
-    },
-    { 
-        id: 3, 
-        name: 'CBD infused Raw Shea Butter',
-        wholesale: 28, 
-        retail: 30, 
-        img: '/batana.jpg'
-    },
-    { 
-        id: 4, 
-        name: 'Raw Shea Butter',
-        wholesale: 95, 
-        retail: 100, 
-        img: '/batana.jpg'
-    },
+    { id: 1, name: 'Body Cream', wholesale: 45, retail: 50, img: '/batana.jpg' },
+    { id: 2, name: 'Face Cream', wholesale: 70, retail: 75, img: '/batana.jpg' },
+    { id: 3, name: 'CBD infused Raw Shea Butter', wholesale: 28, retail: 30, img: '/batana.jpg' },
+    { id: 4, name: 'Raw Shea Butter', wholesale: 95, retail: 100, img: '/batana.jpg' },
 ];
 
 const Products = () => {
@@ -41,7 +17,7 @@ const Products = () => {
 
     const Toast = Swal.mixin({
         toast: true,
-        position: 'top-end', // Change this to 'top-end' for top right corner
+        position: 'top-end',
         iconColor: 'green',
         customClass: {
             popup: 'colored-toast',
@@ -53,24 +29,25 @@ const Products = () => {
 
     function addValueToCart(product) {
         const existingProductIndex = cartVal.findIndex(item => item.id === product.id);
-        
+
         if (existingProductIndex !== -1) {
             // Product already in the cart, increase quantity
             const updatedCart = [...cartVal];
             updatedCart[existingProductIndex].quantity += 1; // Increment quantity
             setCartVal(updatedCart);
+            localStorage.setItem('cart', JSON.stringify(updatedCart)); // Update local storage
         } else {
             // Product not in the cart, add it with quantity 1
             const updatedCart = [...cartVal, { ...product, quantity: 1 }];
             setCartVal(updatedCart);
+            localStorage.setItem('cart', JSON.stringify(updatedCart)); // Update local storage
         }
-    
+
         Toast.fire({
             icon: 'success',
             title: 'Added to Cart!',
-          })
+        });
     }
-    
 
     return (
         <section className='py-10 px-[5%] scroll-mt-28' id='products'>
@@ -79,8 +56,8 @@ const Products = () => {
                 {products.map((product) => (
                     <div key={product.id} className='border p-4 rounded shadow bg-white'>
                         <div className='flex justify-center mb-4'>
-                            <Image 
-                                src={product.img} 
+                            <Image
+                                src={product.img}
                                 width={200}
                                 height={200}
                                 alt={product.name}
