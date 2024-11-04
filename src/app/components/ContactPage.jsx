@@ -73,7 +73,7 @@ export default function ContactPage() {
     const isFormValid = Object.values(formData).every((value) => value.trim() !== '') && isEmailValid;
 
     return (
-        <div className='px-[5%]' id='contact'>
+        <div className='px-[5%] scroll-mt-40' id='contact'>
             <h1 className='text-2xl font-bold text-center'>Contact Us</h1>
 
             <div className='py-10 flex flex-col-reverse sm:flex-row sm:justify-between sm:items-center sm:space-x-28'>

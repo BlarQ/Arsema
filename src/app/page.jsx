@@ -8,7 +8,7 @@ import ContactPage from "./components/ContactPage";
 
 export default function Home() {
   return (
-    <div id="home">
+    <div id="home" className="scroll-mt-52">
       <Hero />  
       <Banner />
       <Products />
