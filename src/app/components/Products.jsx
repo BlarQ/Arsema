@@ -9,7 +9,7 @@ const products = [
     { id: 1, name: 'Body Cream', wholesale: 45, retail: 50, img: '/batana.jpg' },
     { id: 2, name: 'Face Cream', wholesale: 70, retail: 75, img: '/batana.jpg' },
     { id: 3, name: 'CBD Infused Batana Oil', wholesale: 28, retail: 30, img: '/batana.jpg' },
-    { id: 4, name: 'Raw Shea Butter', wholesale: 95, retail: 100, img: '/batana.jpg' },
+    { id: 4, name: 'Shea Butter', wholesale: 95, retail: 100, img: '/batana.jpg' },
 ];
 
 const Products = () => {
